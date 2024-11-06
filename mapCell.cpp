@@ -2,15 +2,14 @@
 // Created by stanh on 21-Oct-24.
 //
 #include "mapCell.h"
-mapCell::mapCell(int x , int y)
+mapCell::mapCell(int x , int y) : cell(x , y)
 {
-    position.push_back(x);
-    position.push_back(y);
+
     contents = EMPTY;
 }
-mapCell::mapCell(std::vector<int> POSITION)
+mapCell::mapCell(std::vector<int> POSITION) : cell(POSITION)
 {
-    position = std::move(POSITION);
+contents = EMPTY;
 }
 
 std::string mapCell::getCellString() {
@@ -19,14 +18,6 @@ std::string mapCell::getCellString() {
     cellstring += std::to_string(getY()) + "]";
     return cellstring;
 }
-int mapCell::getX()
-{
-    return position[0];
-}
-int mapCell::getY()
-{
-    return position[1];
-}
 
 void mapCell::addApple() {
 contents = APPLE;
@@ -34,4 +25,8 @@ contents = APPLE;
 
 void mapCell::makeWall() {
 contents = WALL;
+}
+
+mapCell::cellType mapCell::getContents() {
+    return contents;
 }
