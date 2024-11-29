@@ -7,7 +7,7 @@ mapCell::mapCell(int x , int y) : cell(x , y)
 
     contents = EMPTY;
 }
-mapCell::mapCell(std::vector<int> POSITION) : cell(POSITION)
+mapCell::mapCell(sf::Vector2i POSITION) : cell(POSITION)
 {
 contents = EMPTY;
 }

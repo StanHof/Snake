@@ -15,7 +15,7 @@ private:
     enum cellType{EMPTY , WALL , APPLE};
     cellType contents;
 public:
-    explicit mapCell(std::vector<int> POSITION);
+    explicit mapCell(sf::Vector2i POSITION);
     mapCell(int x, int y);
     std::string getCellString();
     cellType getContents();

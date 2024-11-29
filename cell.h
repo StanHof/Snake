@@ -8,18 +8,19 @@
 
 #include <string>
 #include <vector>
-
+#include <SFML/Graphics.hpp>
 class cell {
 
 private:
 
 
 protected:
-    std::vector<int> position;
+    sf::Vector2i  position;
 public:
-    int getX();
-    int getY();
-    explicit cell(std::vector<int> POSITION);
+    const sf::Vector2i &getPosition() const;
+    const int& getX();
+    const int& getY();
+    explicit cell(sf::Vector2i POSITION);
     cell(int x, int y);
 };
 

@@ -22,6 +22,12 @@ add_executable(snake main.cpp
         mapCell.h
         cell.cpp
         cell.h
+        snake.cpp
+        snake.h
+        snakeCell.cpp
+        snakeCell.h
+        game.cpp
+        game.h
 )
 target_link_libraries(snake PRIVATE sfml-graphics)
 target_compile_features(snake PRIVATE cxx_std_17)

@@ -23,6 +23,7 @@ return column;
 }
 
 void grid::printGrid() {
+
 for(int x=0;x<width;x++)
 {
     for(int y=0;y<height;y++)
@@ -35,4 +36,16 @@ for(int x=0;x<width;x++)
 
 mapCell grid::getCell(int x , int y) {
     return cell_grid[x][y];
+}
+sf::Vector2i grid::getCenter()
+{
+    return {height/2 , width/2};
+}
+
+int grid::getHeight() const {
+    return height;
+}
+
+int grid::getWidth() const {
+    return width;
 }

@@ -7,18 +7,22 @@
 #include <utility>
 
 cell::cell(int x, int y) {
-    position.push_back(x);
-    position.push_back(y);
+    position.x = x;
+    position.y = y;
 }
-int cell::getX()
+const int & cell::getX()
 {
-    return position[0];
+    return position.x;
 }
-int cell::getY()
+const int & cell::getY()
 {
-    return position[1];
+    return position.y;
 }
 
-cell::cell(std::vector<int> POSITION) {
-position = std::move(POSITION);
+cell::cell(sf::Vector2i POSITION) : position(POSITION){
+
+}
+
+const sf::Vector2i &cell::getPosition() const {
+    return position;
 }
