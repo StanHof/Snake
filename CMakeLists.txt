@@ -24,8 +24,6 @@ add_executable(snake main.cpp
         cell.h
         snake.cpp
         snake.h
-        snakeCell.cpp
-        snakeCell.h
         game.cpp
         game.h
 )

@@ -28,7 +28,6 @@ private:
    std::vector<std::vector<mapCell>> cell_grid;
    int height;
    int width;
-   std::vector<mapCell> create_column(int height, int x);
 
 };
 

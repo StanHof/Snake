@@ -17,6 +17,8 @@ std::vector<std::vector<std::string>> strMap;
 public:
     game();
     void printGame();
+
+    void drawStrMap();
 };
 
 

@@ -3,21 +3,25 @@
 //
 
 
+#include <iostream>
 #include "snake.h"
 snake::snake(int xHeadPos, int yHeadPos, int len) {
-    body.push_back(snakeCell(xHeadPos , yHeadPos  , 1));
-for(int i=1;i<len;i++)
+
+for(int i=0;i<len;i++)
 {
-  body.push_back(snakeCell(xHeadPos , yHeadPos + i , 0));
+  body.push_back(cell(xHeadPos , yHeadPos + i));
 }
+    headPos = {xHeadPos , yHeadPos};
+
 }
 
 snake::snake(sf::Vector2i headPosition, int len) {
-    body.push_back(snakeCell(headPosition  , true));
-    for(int i=1;i<len;i++)
+
+    for(int i=0;i<len;i++)
     {
-        body.push_back(snakeCell(headPosition.x , headPosition.y + i , false));
+        body.push_back(cell(headPosition.x , headPosition.y + i ));
     }
+    headPos = headPosition;
 }
 
 std::vector<sf::Vector2i> snake::getBodyPosition() {
@@ -29,6 +33,12 @@ std::vector<sf::Vector2i> snake::getBodyPosition() {
     return pos;
 }
 
-snakeCell snake::getCell(int id) {
+cell snake::getCell(int id) {
     return body[id];
+}
+
+void snake::moveSnake(sf::Vector2i directionVector) {
+    body.pop_back();
+body.insert(body.begin(), cell((headPos + directionVector)));
+headPos = body.begin()->getPosition();
 }

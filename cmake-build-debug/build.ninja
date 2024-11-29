@@ -84,13 +84,6 @@ build CMakeFiles/snake.dir/snake.cpp.obj: CXX_COMPILER__snake_unscanned_Debug C$
   OBJECT_DIR = CMakeFiles\snake.dir
   OBJECT_FILE_DIR = CMakeFiles\snake.dir
 
-build CMakeFiles/snake.dir/snakeCell.cpp.obj: CXX_COMPILER__snake_unscanned_Debug C$:/Users/stanh/CLionProjects/snake/snakeCell.cpp || cmake_object_order_depends_target_snake
-  DEP_FILE = CMakeFiles\snake.dir\snakeCell.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/stanh/CLionProjects/snake/cmake-build-debug/_deps/sfml-src/include
-  OBJECT_DIR = CMakeFiles\snake.dir
-  OBJECT_FILE_DIR = CMakeFiles\snake.dir
-
 build CMakeFiles/snake.dir/game.cpp.obj: CXX_COMPILER__snake_unscanned_Debug C$:/Users/stanh/CLionProjects/snake/game.cpp || cmake_object_order_depends_target_snake
   DEP_FILE = CMakeFiles\snake.dir\game.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -106,7 +99,7 @@ build CMakeFiles/snake.dir/game.cpp.obj: CXX_COMPILER__snake_unscanned_Debug C$:
 #############################################
 # Link the executable bin\snake.exe
 
-build bin/snake.exe: CXX_EXECUTABLE_LINKER__snake_Debug CMakeFiles/snake.dir/main.cpp.obj CMakeFiles/snake.dir/grid.cpp.obj CMakeFiles/snake.dir/mapCell.cpp.obj CMakeFiles/snake.dir/cell.cpp.obj CMakeFiles/snake.dir/snake.cpp.obj CMakeFiles/snake.dir/snakeCell.cpp.obj CMakeFiles/snake.dir/game.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-graphics-d-2.dll bin/sfml-system-d-2.dll bin/sfml-window-d-2.dll
+build bin/snake.exe: CXX_EXECUTABLE_LINKER__snake_Debug CMakeFiles/snake.dir/main.cpp.obj CMakeFiles/snake.dir/grid.cpp.obj CMakeFiles/snake.dir/mapCell.cpp.obj CMakeFiles/snake.dir/cell.cpp.obj CMakeFiles/snake.dir/snake.cpp.obj CMakeFiles/snake.dir/game.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-graphics-d-2.dll bin/sfml-system-d-2.dll bin/sfml-window-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-d.a  _deps/sfml-build/lib/libsfml-window-d.a  _deps/sfml-build/lib/libsfml-system-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\snake.dir

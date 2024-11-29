@@ -4,30 +4,22 @@
 #include <iostream>
 #include "grid.h"
 
-grid::grid(int HEIGHT, int WIDTH) {
+grid::grid(int WIDTH, int HEIGHT) {
     height = HEIGHT;
     width = WIDTH;
 for(int x = 0;x<width;x++)
 {
-    cell_grid.push_back(create_column(height , x));
-}
-}
-std::vector<mapCell> grid::create_column(int height , int x){
-    std::vector<mapCell> column;
-    column.reserve(height);
-for(int y=0; y < height; y++)
+    cell_grid.push_back(std::vector<mapCell>());
+    for(int y = 0;y<height;y++)
     {
-        column.emplace_back(x , y);
+        cell_grid[x].push_back(mapCell(x , y));
     }
-return column;
+}
 }
 
 void grid::printGrid() {
-
-for(int x=0;x<width;x++)
-{
-    for(int y=0;y<height;y++)
-    {
+    for(int y=0;y<height;y++){
+        for(int x=0;x<width;x++){
        std::cout<< getCell(x , y).getCellString();
     }
     std::cout<<"\n";
